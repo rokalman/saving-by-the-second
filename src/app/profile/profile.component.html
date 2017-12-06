@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="form-group">
+  <label for="userName">Shower Nickname</label>
+  <input type="text" class="form-control" [(ngModel)]="currentProfile.user.userName" id="userName" readonly/>
+</div>
+<div class="form-group">
+  <label for="flowRate">Flow Rate (GPM)</label>
+  <input type="text" class="form-control" [(ngModel)]="currentProfile.user.flowRate" id="flowRate"/>
+</div>
+<div class="form-group">
+  <label for="totalCoins">Total Shower Coins Earned</label>
+  <input type="text" class="form-control" [(ngModel)]="totalCoins" id="totalCoins" readonly/>
+</div>
+<div class="form-group">
+  <label for="lastSeven">Coins earned in Last Week</label>
+  <input type="text" class="form-control" [(ngModel)]="lastSevenCoins" id="lastSeven" readonly/>
+</div>
+<div class="form-group">
+  <label for="level">Shower Level for Last Week</label>
+  <input type="text" class="form-control" [(ngModel)]="level" id="level" readonly/>
+</div>
+<div class="form-group">
+  <button (click)="saveProfile()">Save</button>
+</div>

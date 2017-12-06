@@ -1,0 +1,8 @@
+<p class="title">
+  Home
+</p>
+<ul class="actions">
+  <li *ngFor="let action of actions" (click)="routeTo(action.route)">
+    {{action.name}}
+  </li>
+</ul>

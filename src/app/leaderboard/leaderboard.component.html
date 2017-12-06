@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<p class="title">
+  Leaderboard
+</p>
+
+<ul class="leaders">
+    <li [class.currentProf]="profile.user.userName === currentProfile.user.userName" 
+        [class.otherProf]="profile.user.userName !== currentProfile.user.userName" *ngFor="let profile of profiles">
+      <p>
+        {{profile.user.userName}}
+      </p>
+      <p>
+        {{getCoins(profile)}} coins
+      </p>  
+    </li>
+  </ul>

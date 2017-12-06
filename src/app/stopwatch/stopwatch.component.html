@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="title">
+  Stopwatch
+</div>
+<div class="center">
+  <div class="timer">{{timer.time}}</div>
+  <div class="flowRate">{{currentProfile.user.flowRate}} GPM</div>
+  <div>
+    <div class="water">{{timer.waterUsed}} gal</div>
+    <div class="coins">{{timer.coins}} coins</div>
+  </div>
+  <div class="buttonBar">
+    <button (click)="toggleTimer()" class="stopwatchButton">{{toggleButtonLabel}}</button>
+    <button (click)="endShower()" class="stopwatchButton">{{endShowerLabel}}</button>
+  </div>
+</div>

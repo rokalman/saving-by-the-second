@@ -1,0 +1,12 @@
+.back {
+    float: left;
+}
+
+.home {
+    float: right;
+}
+
+.clear {
+    width: 100%;
+    clear: both;
+}
