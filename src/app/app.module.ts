@@ -49,7 +49,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // For debugging
+      { enableTracing: true, useHash: true } // For debugging
     )
   ],
   providers: [ProfileService, QuizServiceService],
