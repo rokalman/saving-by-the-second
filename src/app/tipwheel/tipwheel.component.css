@@ -1,0 +1,15 @@
+.header {
+    font-size: 1.5em;
+}
+
+.tip {
+    visibility: hidden;
+}
+
+div {
+    text-align: center;
+}
+
+.tiptext {
+    font-size: 1.25em;
+}

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CalcUtils } from '../calc-utils'
-import { ProfileService } from '../profile.service'
-import { Profile } from '../profile'
-import { ShowerEntry } from '../shower-entry'
+import { Router } from '@angular/router';
+import { CalcUtils } from '../calc-utils';
+import { ProfileService } from '../profile.service';
+import { Profile } from '../profile';
+import { ShowerEntry } from '../shower-entry';
 
 @Component({
   selector: 'app-stopwatch',
@@ -23,7 +24,12 @@ export class StopwatchComponent implements OnInit {
 
   interval = null
 
-  seconds = 0;
+  results: boolean = false;
+
+  seconds: number = 0;
+
+  actualMinutes: number = 0;
+  actualSeconds: number = 0;
 
   timer = {
     time: '00:00',
@@ -31,7 +37,7 @@ export class StopwatchComponent implements OnInit {
     coins: 50
   }
 
-  constructor(private profileService: ProfileService) {
+  constructor(private profileService: ProfileService, private router: Router) {
     this.currentProfile = this.profileService.getDefaultProfile();
   }
 
@@ -56,7 +62,10 @@ export class StopwatchComponent implements OnInit {
     console.log("interval firing")
     this.timer.waterUsed = this.calculateGallons(this.currentProfile.user.flowRate,this.seconds)
     this.timer.coins = CalcUtils.coinCalculator(this.timer.waterUsed)
-    this.timer.time = this.formatTime(this.seconds)
+    this.actualMinutes = this.getMinutes(this.seconds);
+    this.actualSeconds = this.getSeconds(this.seconds);
+
+    this.timer.time = this.formatTime(this.actualMinutes, this.actualSeconds);
   }
 
   calculateGallons(flowRate, seconds) {
@@ -65,13 +74,19 @@ export class StopwatchComponent implements OnInit {
     return gallons/100
   }
 
-  
-
-  formatTime(seconds) {
-    let minutes: String = String(Math.round(seconds/60)).padStart(2,'0')
-    let secs: String = String(seconds % 60).padStart(2,'0')
+  formatTime(actualMinutes: number, actualSeconds): string {
+    let minutes: String = String(actualMinutes).padStart(2,'0')
+    let secs: String = String(actualSeconds).padStart(2,'0')
 
     return `${minutes}:${secs}`
+  }
+
+  getMinutes(seconds: number): number {
+    return Math.round(seconds/60);
+  }
+
+  getSeconds(seconds: number): number {
+    return seconds % 60;
   }
 
   endShower() {
@@ -81,6 +96,11 @@ export class StopwatchComponent implements OnInit {
     let shower: ShowerEntry = new ShowerEntry(new Date(), this.timer.waterUsed, this.timer.coins);
     this.currentProfile.addShowerEntry(shower);
     this.profileService.saveProfile(this.currentProfile);
+    this.results = true;
+  }
+
+  goToLeaderboard() {
+    this.router.navigateByUrl('/leaderboard');
   }
 
 }

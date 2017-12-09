@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProfileService } from '../profile.service';
 import { CalcUtils } from '../calc-utils';
 import { Profile } from '../profile';
@@ -15,7 +16,7 @@ export class ProfileComponent implements OnInit {
   level: string;
 
 
-  constructor(private profileService: ProfileService) { 
+  constructor(private profileService: ProfileService, private router: Router) { 
     this.currentProfile = this.profileService.getDefaultProfile();
     this.totalCoins = this.currentProfile.getTotalCoins(true);
     this.lastSevenCoins = this.currentProfile.getTotalCoins(false);
@@ -27,5 +28,9 @@ export class ProfileComponent implements OnInit {
 
   saveProfile() {
     this.profileService.saveProfile(this.currentProfile);
+  }
+
+  howToMeasure() {
+    this.router.navigateByUrl('/measure');
   }
 }

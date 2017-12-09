@@ -16,6 +16,9 @@ import { ProfileService } from './profile.service';
 import { CompetitionComponent } from './competition/competition.component'
 import { QuizServiceService } from './quiz-service.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MeasureComponent } from './measure/measure.component';
+import { TipServiceService } from './tip-service.service';
+import { ResultsComponent } from './results/results.component';
 
 const appRoutes: Routes = [
   { path: 'splash', component: SplashComponent },
@@ -27,6 +30,8 @@ const appRoutes: Routes = [
   { path: 'competition', component: CompetitionComponent },
   { path: 'tips', component: TipwheelComponent },
   { path: 'demo', component: BootstrapComponent },
+  { path: 'measure', component: MeasureComponent },
+  { path: 'results', component: ResultsComponent },
   { path: '',   redirectTo: '/splash', pathMatch: 'full' }
 ];
 
@@ -42,7 +47,9 @@ const appRoutes: Routes = [
     TipwheelComponent,
     BootstrapComponent,
     CompetitionComponent,
-    NavbarComponent
+    NavbarComponent,
+    MeasureComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,7 @@ const appRoutes: Routes = [
       { enableTracing: true, useHash: true } // For debugging
     )
   ],
-  providers: [ProfileService, QuizServiceService],
+  providers: [ProfileService, QuizServiceService, TipServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

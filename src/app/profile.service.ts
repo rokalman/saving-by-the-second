@@ -5,15 +5,15 @@ import { QuizEntry } from './quiz-entry';
 
 @Injectable()
 export class ProfileService {
-  profileIds: String[] = [];
+  profileIds: String[] = ["TheWaterSaver","TheGamerSaver","BobsTheBomb234","BestMom4Ever"];
   readonly uidPrefix: string = "fll-u-411df5f3-fa49-4d45-b577-4bf0a495a27c-"
   readonly profId: string = "fll-profs-411df5f3-fa49-4d45-b577-4bf0a495a27c"
 
   constructor() { 
-    let profIds: string = this.getProfileIdAsJSON();
+    /*let profIds: string = this.getProfileIdAsJSON();
     if(profIds != null) {
       this.profileIds = JSON.parse(profIds);
-    } 
+    }*/ 
   }
 
   getDefaultProfile() : Profile {

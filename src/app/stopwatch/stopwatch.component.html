@@ -3,14 +3,35 @@
   Stopwatch
 </div>
 <div class="center">
-  <div class="timer">{{timer.time}}</div>
-  <div class="flowRate">{{currentProfile.user.flowRate}} GPM</div>
-  <div>
-    <div class="water">{{timer.waterUsed}} gal</div>
-    <div class="coins">{{timer.coins}} coins</div>
+  <div id="timer" [class.hide]="results">
+    <div class="timer">{{timer.time}}</div>
+    <div class="flowRate">{{currentProfile.user.flowRate}} GPM</div>
+    <div>
+      <div class="water">{{timer.waterUsed}} gal</div>
+      <div class="coins">{{timer.coins}} coins</div>
+    </div>
+    <div class="buttonBar">
+      <button (click)="toggleTimer()" class="stopwatchButton">{{toggleButtonLabel}}</button>
+      <button (click)="endShower()" class="stopwatchButton">{{endShowerLabel}}</button>
+    </div>
   </div>
-  <div class="buttonBar">
-    <button (click)="toggleTimer()" class="stopwatchButton">{{toggleButtonLabel}}</button>
-    <button (click)="endShower()" class="stopwatchButton">{{endShowerLabel}}</button>
+  <div id="results" [class.hide]="!results">
+    <p class="resultTitle">
+      Your Shower was ...
+    </p>
+    <div class="results">
+      <div>{{actualMinutes}} minutes {{actualSeconds}} seconds Long</div>
+      <div>{{timer.waterUsed}} Gallons</div>
+      <div>You Earned {{timer.coins}} coins</div>
+      
+    </div>
+    <div class="resultsBar">
+        <div class="left">
+          You can enter only one shower time on the app per day
+        </div>
+        <div class="right">
+            <button (click)="goToLeaderboard()" class="leaderboard">Go to Leaderboard</button>
+        </div>
+      </div>
   </div>
 </div>

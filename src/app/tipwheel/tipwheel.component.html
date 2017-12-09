@@ -1,4 +1,16 @@
 <app-navbar></app-navbar>
-<p>
-  tipwheel works!
+<p class="header">
+  Spin the wheel to learn a shower water saving tip!
 </p>
+<div>
+  <img (click)="getTip()" src="assets/tipwheel.png" height="250px"/>
+</div>
+<p class="header">
+  You can save water by…..
+</p>
+<div [class.tip]="tip === ''">
+  <p class="tiptext">
+      {{tip}}
+  </p>
+  <button (click)="goShower()">Go Take a Shower</button>
+</div>

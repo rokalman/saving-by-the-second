@@ -22,3 +22,11 @@
     height: 3.5em;
     border-radius: 4px;
   }
+
+  .choices li.incorrect {
+    background-color: rgb(255, 0, 0);
+  }
+
+  .choices li.correct {
+    background-color: rgb(0, 255, 0);
+  }

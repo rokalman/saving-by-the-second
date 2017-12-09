@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TipServiceService } from '../tip-service.service'
 
 @Component({
   selector: 'app-tipwheel',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tipwheel.component.css']
 })
 export class TipwheelComponent implements OnInit {
+  tip: String = "";
 
-  constructor() { }
+  constructor(private tipService: TipServiceService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  getTip() {
+    this.tip = this.tipService.getTip();
+  }
+
+  goShower() {
+    this.router.navigateByUrl('/stopwatch');
   }
 
 }

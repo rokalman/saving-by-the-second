@@ -3,7 +3,10 @@
   {{question.question}}
 </div>
 <ul class="choices">
-  <li *ngFor="let choice of question.choices">
+  <li *ngFor="let choice of question.choices; let i = index" 
+      [class.correct]="answered ? correct(i+1) : false"
+      [class.incorrect]="answered ? !correct(i+1): false"
+      (click)="checkAnswer(i+1)">
     {{choice}}
   </li>
 </ul>
