@@ -31,7 +31,7 @@ export class QuizServiceService {
     question.id = 3;
     question.question = "What percent of indoor water use is showering/bathing?";
     question.choices = ["27%","15%","7%"];
-    question.answer = 0;
+    question.answer = 1;
 
     this.questions.push(question);
 
