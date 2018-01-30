@@ -13,7 +13,7 @@ export class QuizServiceService {
     question.id = 1;
     question.question = "How Many gallons (on average) does it take to fill a bathtub?";
     question.choices = ["47","37","18"];
-    question.answer = 1;
+    question.answer = 2;
 
     this.questions.push(question);
 
@@ -22,7 +22,7 @@ export class QuizServiceService {
     question.id = 2;
     question.question = "How much of Earth's water is freshwater?";
     question.choices = ["4%","56%","2%"];
-    question.answer = 2;
+    question.answer = 3;
 
     this.questions.push(question);
 
@@ -39,8 +39,8 @@ export class QuizServiceService {
     
     question.id = 4;
     question.question = "Per day how many gallons of water does an average American use?";
-    question.choices = ["70-110","20-40","140-70"];
-    question.answer = 2;
+    question.choices = ["80-100","20-40","140-70"];
+    question.answer = 1;
 
     this.questions.push(question);
 
@@ -49,7 +49,7 @@ export class QuizServiceService {
     question.id = 5;
     question.question = "On average how many gallons does a shower use in 10 minutes?";
     question.choices = ["40","30","20"];
-    question.answer = 2;
+    question.answer = 3;
 
     this.questions.push(question);
   }
