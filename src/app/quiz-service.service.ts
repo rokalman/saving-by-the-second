@@ -52,6 +52,58 @@ export class QuizServiceService {
     question.answer = 3;
 
     this.questions.push(question);
+    
+    question = new Quiz();
+    
+    question.id = 6;
+    question.question = "Per year how many gallons of water does the United States use?";
+    question.choices = ["1 billion","148 trillion","300 billion"];
+    question.answer = 2;
+
+    this.questions.push(question);
+    
+    question = new Quiz();
+    
+    question.id = 7;
+    question.question = "During a 5 minute shower, what percent of water can a low flow shower head save?";
+    question.choices = ["40%","20%","10%"];
+    question.answer = 1;
+
+    this.questions.push(question);
+    
+    question = new Quiz();
+    
+    question.id = 8;
+    question.question = "Per month how many gallons of water does the average person waist while waiting for their shower water to heat up?";
+    question.choices = ["50-100","400-500","200-300"];
+    question.answer = 3;
+
+    this.questions.push(question);
+    
+    question = new Quiz();
+    
+    question.id = 9;
+    question.question = "In Japan where do people frequently bathe?";
+    question.choices = ["In Mud","In Natural Springs","In Lakes and Rivers"];
+    question.answer = 2;
+
+    this.questions.push(question);
+    
+    question = new Quiz();
+    
+    question.id = 10;
+    question.question = "In Turkey where do people frequently bathe?";
+    question.choices = ["In Hammams","In Hot Tubs","In the Rain"];
+    question.answer = 1;
+
+    this.questions.push(question);
+    
+    question.id = 11;
+    question.question = "Once a week where do people in Finland shower?";
+    question.choices = ["In Ice","In a Sauna","In a Waterfall"];
+    question.answer = 2;
+
+    this.questions.push(question);
   }
 
   getQuestion(): Quiz {
