@@ -15,7 +15,7 @@ export class SplashComponent implements OnInit {
   }
 
   ngAfterViewInit(){
-    this.inteval = window.setInterval(() => this.routeToHome(),2500);
+    this.inteval = window.setInterval(() => this.routeToHome(),5000);
   }
 
   routeToHome() {

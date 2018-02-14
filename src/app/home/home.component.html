@@ -2,7 +2,6 @@
   Home
 </p>
 <ul class="actions">
-  <li *ngFor="let action of actions" (click)="routeTo(action.route)">
-    {{action.name}}
+  <li *ngFor="let action of actions" id= "{{action.id}}" (click)="routeTo(action.route)">
   </li>
 </ul>

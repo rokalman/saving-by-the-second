@@ -3,7 +3,7 @@
   Shower Competition
 </p>
 <ul class="actions">
-  <li *ngFor="let action of actions" (click)="routeTo(action.route)">
+  <li *ngFor="let action of actions" id= "{{action.id}}" (click)="routeTo(action.route)">
     {{action.name}}
   </li>
 </ul>

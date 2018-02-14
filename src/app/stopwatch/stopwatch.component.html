@@ -11,8 +11,8 @@
       <div class="coins">{{timer.coins}} coins</div>
     </div>
     <div class="buttonBar">
-      <button (click)="toggleTimer()" class="stopwatchButton">{{toggleButtonLabel}}</button>
-      <button (click)="endShower()" class="stopwatchButton">{{endShowerLabel}}</button>
+      <button mat-raised-button color="primary" (click)="toggleTimer()" class="stopwatchButton">{{toggleButtonLabel}}</button>
+      <button mat-raised-button color="primary" (click)="endShower()" class="stopwatchButton">{{endShowerLabel}}</button>
     </div>
   </div>
   <div id="results" [class.hide]="!results">
@@ -30,7 +30,7 @@
           You can enter only one shower time on the app per day
         </div>
         <div class="right">
-            <button (click)="goToLeaderboard()" class="leaderboard">Go to Leaderboard</button>
+            <button mat-raised-button color="primary" (click)="goToLeaderboard()" class="leaderboard">Go to Leaderboard</button>
         </div>
       </div>
   </div>

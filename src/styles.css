@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.full-width {
+    width: 100%;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#portraitVideo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+#landscapeVideo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+@media screen and (orientation: portrait) {
+    #landscapeVideo {
+        display: none;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #portraitVideo {
+        display: none;
+    }
+}
+
+body {
+    background-image: url("assets/TileBackground.jpg");
+}
+
+.mat-raised-button {
+    border-radius: 10px !important;
+}
+
+li#leaderboard {
+    background-image: url("assets/LEADERBOARD.png");
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+
+  li#quiz {
+    background-image: url("assets/QUESTIONOFTHEDAY.png");
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+
+  li#showercomp {
+    background-image: url("assets/SHOWERCOMPETITION.png");
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+
+  li#profile {
+    background-image: url("assets/PROFILE.png");
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+
+  li#stopwatch {
+    background-image: url("assets/SHOWERSTOPWATCH.png");
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+
+  li#tips {
+    background-image: url("assets/TIPS.png");
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }

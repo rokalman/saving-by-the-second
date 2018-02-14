@@ -1,14 +1,22 @@
-<app-navbar></app-navbar>
-<p class="title">
-  How To Find Your GPM
-</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>How To Find Your Flow Rate</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src='assets/measure.png'/>
+  <mat-card-content>
+      <ol class="steps">
+          <li *ngFor="let step of steps">
+            <p>
+              {{step}}
+            </p>
+          </li>
+      </ol>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-button (click)="closeDialog()">Ok</button>
+  </mat-card-actions>
+</mat-card>
 
-<ol class="steps">
-    <li *ngFor="let step of steps">
-      <p>
-        {{step}}
-      </p>
-    </li>
-</ol>
 
-<img src='assets/measure.png' height="200px"/>
+
+

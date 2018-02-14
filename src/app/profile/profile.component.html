@@ -1,25 +1,29 @@
 <app-navbar></app-navbar>
-<div class="form-group">
-  <label for="userName">Shower Nickname</label>
-  <input type="text" class="form-control" [(ngModel)]="currentProfile.user.userName" id="userName" readonly/>
-</div>
-<div class="form-group">
-  <label for="flowRate">Flow Rate (GPM)</label>
-  <input type="text" class="form-control" [(ngModel)]="currentProfile.user.flowRate" id="flowRate"/>
-</div>
-<div class="form-group">
-  <label for="totalCoins">Total Shower Coins Earned</label>
-  <input type="text" class="form-control" [(ngModel)]="totalCoins" id="totalCoins" readonly/>
-</div>
-<div class="form-group">
-  <label for="lastSeven">Coins earned in Last Week</label>
-  <input type="text" class="form-control" [(ngModel)]="lastSevenCoins" id="lastSeven" readonly/>
-</div>
-<div class="form-group">
-  <label for="level">Shower Level for Last Week</label>
-  <input type="text" class="form-control" [(ngModel)]="level" id="level" readonly/>
-</div>
-<div class="form-group">
-  <button (click)="saveProfile()">Save</button>
-  <button (click)="howToMeasure()">How to Measure your Flow Rate</button>
-</div>
+<mat-card [style.opacity]="0.9">
+  <mat-card-header>
+    <mat-card-title>Profile</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Shower Nickname" [(ngModel)]="currentProfile.user.userName" id="userName" readonly>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Flow Rate (GPM)" [(ngModel)]="currentProfile.user.flowRate" id="flowRate"/>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Total Shower Coins Earned" [(ngModel)]="totalCoins" id="totalCoins" readonly/>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Coins earned in Last Week" [(ngModel)]="lastSevenCoins" id="lastSeven" readonly/>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Shower Level for Last Week" [(ngModel)]="level" id="level" readonly/>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="saveProfile()">
+        Save
+      </button>
+      <button mat-raised-button color="primary" (click)="howToMeasure()">How to Measure your Flow Rate</button>
+  </mat-card-actions>
+</mat-card>

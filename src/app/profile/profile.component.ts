@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { MatDialog, MatDialogRef } from '@angular/material';
 import { ProfileService } from '../profile.service';
 import { CalcUtils } from '../calc-utils';
 import { Profile } from '../profile';
+import { MeasureComponent } from '../measure/measure.component';
 
 @Component({
   selector: 'app-profile',
@@ -16,7 +17,7 @@ export class ProfileComponent implements OnInit {
   level: string;
 
 
-  constructor(private profileService: ProfileService, private router: Router) { 
+  constructor(private profileService: ProfileService, public dialog: MatDialog) { 
     this.currentProfile = this.profileService.getDefaultProfile();
     this.totalCoins = this.currentProfile.getTotalCoins(true);
     this.lastSevenCoins = this.currentProfile.getTotalCoins(false);
@@ -31,6 +32,6 @@ export class ProfileComponent implements OnInit {
   }
 
   howToMeasure() {
-    this.router.navigateByUrl('/measure');
+    this.dialog.open(MeasureComponent);
   }
 }

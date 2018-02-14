@@ -10,12 +10,15 @@ export class HomeComponent implements OnInit {
 
   actions = [{
     name: "Leaderboard",
+    id: "leaderboard",
     route: "/leaderboard"
   },{
     name: "Question of the Day",
+    id: "quiz",
     route: "/quiz"
   },{
     name: "Shower Competition",
+    id: "showercomp",
     route: "/competition"
 
   }];

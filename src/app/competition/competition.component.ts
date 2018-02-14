@@ -9,13 +9,13 @@ import { Router } from '@angular/router'
 export class CompetitionComponent implements OnInit {
 
   actions = [{
-    name: "Profile",
+    id: "profile",
     route: "/profile"
   },{
-    name: "Tips",
+    id: "tips",
     route: "/tips"
   },{
-    name: "Shower Stopwatch",
+    id: "stopwatch",
     route: "/stopwatch"
 
   }];
