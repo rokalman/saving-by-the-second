@@ -3,7 +3,20 @@
   Leaderboard
 </p>
 
-<ul class="leaders">
+<mat-list>
+  <mat-list-item [class.currentProf]="profile.user.userName === currentProfile.user.userName" 
+                 [class.otherProf]="profile.user.userName !== currentProfile.user.userName" 
+                 *ngFor="let profile of profiles">
+      <img matListAvatar src="assets/{{profile.user.avatar}}" alt="...">
+    <p mat-line>
+        {{profile.user.userName}}
+    </p>
+    <p mat-line>
+        {{getCoins(profile)}} coins
+    </p>
+  </mat-list-item>
+</mat-list>
+<!--ul class="leaders">
     <li [class.currentProf]="profile.user.userName === currentProfile.user.userName" 
         [class.otherProf]="profile.user.userName !== currentProfile.user.userName" *ngFor="let profile of profiles">
       <p>
@@ -13,4 +26,4 @@
         {{getCoins(profile)}} coins
       </p>  
     </li>
-  </ul>
+  </ul-->

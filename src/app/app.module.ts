@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule, MatList } from '@angular/material';
+import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { SplashComponent } from './splash/splash.component';
@@ -63,6 +64,7 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatListModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true, useHash: true } // For debugging

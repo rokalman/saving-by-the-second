@@ -15,10 +15,10 @@ import { Router } from '@angular/router'
 })
 export class BootstrapComponent implements OnInit {
   readonly millisInDay: number = 60 * 60 * 24 * 1000;
-  users: User[] = JSON.parse('[{"userName": "TheWaterSaver","flowRate":2.5},' + 
-                              '{"userName": "TheGamerSaver","flowRate":2.0},' + 
-                              '{"userName": "BobsTheBomb234","flowRate":2.0},' + 
-                              '{"userName": "BestMom4Ever","flowRate":2.0}]');
+  users: User[] = JSON.parse('[{"userName": "TheWaterSaver","flowRate":2.5, "avatar": "batman.png"},' + 
+                              '{"userName": "TheGamerSaver","flowRate":2.0, "avatar": "emmett.jpg"},' + 
+                              '{"userName": "BobsTheBomb234","flowRate":2.0, "avatar": "garmadon.jpg"},' + 
+                              '{"userName": "BestMom4Ever","flowRate":2.0, "avatar": "wildstyle.png"}]');
 
   constructor(private profileService: ProfileService, private router: Router) { }
 
