@@ -1,7 +1,17 @@
 <p class="title">
   Home
 </p>
-<ul class="actions">
-  <li *ngFor="let action of actions" id= "{{action.id}}" (click)="routeTo(action.route)">
-  </li>
-</ul>
+<mat-grid-list cols="1" rowHeight="125px" id="portraitList">
+    <mat-grid-tile
+      *ngFor="let action of actions"
+      id= "{{action.id}}" (click)="routeTo(action.route)">
+    </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="2" rowHeight="7em" id="landscapeList">
+    <mat-grid-tile
+      *ngFor="let action of actions"
+      [colspan]="action.cols"
+      [rowspan]="1"
+      id= "{{action.id}}" (click)="routeTo(action.route)">
+    </mat-grid-tile>
+</mat-grid-list>

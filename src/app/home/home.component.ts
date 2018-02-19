@@ -11,16 +11,18 @@ export class HomeComponent implements OnInit {
   actions = [{
     name: "Leaderboard",
     id: "leaderboard",
-    route: "/leaderboard"
+    route: "/leaderboard",
+    cols: 1
   },{
     name: "Question of the Day",
     id: "quiz",
-    route: "/quiz"
+    route: "/quiz", 
+    cols: 1
   },{
     name: "Shower Competition",
     id: "showercomp",
-    route: "/competition"
-
+    route: "/competition",
+    cols: 2
   }];
 
   constructor(private router: Router) { }

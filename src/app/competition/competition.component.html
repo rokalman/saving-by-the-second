@@ -2,8 +2,17 @@
 <p class="title">
   Shower Competition
 </p>
-<ul class="actions">
-  <li *ngFor="let action of actions" id= "{{action.id}}" (click)="routeTo(action.route)">
-    {{action.name}}
-  </li>
-</ul>
+<mat-grid-list cols="1" rowHeight="125px" id="portraitList">
+    <mat-grid-tile
+      *ngFor="let action of actions"
+      id= "{{action.id}}" (click)="routeTo(action.route)">
+    </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="2" rowHeight="90px" id="landscapeList">
+    <mat-grid-tile
+      *ngFor="let action of actions"
+      [colspan]="action.cols"
+      [rowspan]="1"
+      id= "{{action.id}}" (click)="routeTo(action.route)">
+    </mat-grid-tile>
+</mat-grid-list>

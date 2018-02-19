@@ -1,5 +1,5 @@
 .header {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 .tip {
@@ -11,5 +11,34 @@ div {
 }
 
 .tiptext {
-    font-size: 1.25em;
+    font-size: 1em;
+}
+
+#spinWheel {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (orientation: landscape) {
+    #wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+        float: left;
+    }
+
+    #tipWrapper {
+        width: 50%;
+        float: right;
+    }
+
+    .tiptext {
+        font-size: 2em;
+    }
+
+    #spinWheel {
+        height: 80%;
+        width: 80%;
+    }
 }

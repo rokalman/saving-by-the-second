@@ -24,10 +24,6 @@
     width: 50%;
 }
 
-.stopwatchButton {
-    font-size: 1.5em;
-}
-
 .hide {
     display: none;
 }
@@ -41,7 +37,12 @@
     font-family: "Arial";
     font-size: 1.75em;
     padding: 20px;
-    background-color: #d3d3d3
+    background-color: rgb(255,255,255);
+    opacity: 0.9;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
 }
 
 .results div {
@@ -80,5 +81,4 @@
 .leaderboard {
     height: 100%;
     font-family: "Arial";
-    font-size: 1em;
 }

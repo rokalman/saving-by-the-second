@@ -20,4 +20,15 @@
     border-radius: 4px;
   }
 
+@media screen and (orientation: portrait) {
+  #landscapeList {
+      display: none;
+  }
+}
+
+@media screen and (orientation: landscape) {
+    #portraitList {
+        display: none;
+    }
+}
   

@@ -2,13 +2,20 @@
 <p class="header">
   Spin the wheel to learn a shower water saving tip!
 </p>
-<div>
-  <img (click)="getTip()" src="assets/tipwheel.png" height="250px"/>
+<div id="wrapper">
+  <!--img (click)="getTip()" src="assets/tipwheel.png" height="250px"/-->
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="none" viewBox="0 0 400 400" (click)="getTip()" id="spinWheel">
+		<circle cx="200" cy="200" r="180" fill="#222222"/>
+		<g id="spinner-board"></g>
+		<path id="spinner-arrow" d="M 195 200 L 195 70 L 188 70 L 200 55 L 212 70 L 205 70 205 200 Z" fill="#EEEEEE" stroke="#222222" style="stroke-width:2px"/>
+		<circle cx="200" cy="200" r="18" fill="#444444" stroke="#222222" style="stroke-width:2px"/>
+		<circle cx="200" cy="200" r="9" fill="#666666" stroke="#222222" style="stroke-width:2px"/>
+	</svg>
 </div>
 <p class="header">
   You can save water by…..
 </p>
-<div [class.tip]="tip === ''">
+<div id="tipWrapper" [class.tip]="tip === ''">
   <p class="tiptext">
       {{tip}}
   </p>

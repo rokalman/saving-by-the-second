@@ -1,10 +1,10 @@
 .title {
     font-family: "Arial";
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
 
 .choices {
-    margin: 0 0 2em 0;
+    margin-top: 2em;
     list-style-type: none;
     padding: 0;
     width: 100%;
@@ -12,21 +12,25 @@
 
   .choices li {
     font-family: "Arial";
-    font-size: 2em;
+    font-size: 1.5em;
     cursor: pointer;
     position: relative;
     left: 0;
     background-color: #EEE;
-    margin: .5em;
+    margin-bottom: 0.5em;
     padding: .3em 0;
-    height: 3.5em;
-    border-radius: 4px;
+    height: 3em;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
   }
 
   .choices li.incorrect {
-    background-color: rgb(255, 0, 0);
+    background-color: #0852a0;
+    color: rgb(255,255,255);
   }
 
   .choices li.correct {
-    background-color: rgb(0, 255, 0);
+    background-color: #e0ca14;
   }

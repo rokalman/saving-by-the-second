@@ -10,13 +10,16 @@ export class CompetitionComponent implements OnInit {
 
   actions = [{
     id: "profile",
-    route: "/profile"
+    route: "/profile",
+    cols: 1
   },{
     id: "tips",
-    route: "/tips"
+    route: "/tips",
+    cols: 1
   },{
     id: "stopwatch",
-    route: "/stopwatch"
+    route: "/stopwatch",
+    cols: 2
 
   }];
 

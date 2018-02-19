@@ -13,9 +13,12 @@ export class TipwheelComponent implements OnInit {
   constructor(private tipService: TipServiceService, private router: Router) { }
 
   ngOnInit() {
+    eval("initWheel();")
   }
 
   getTip() {
+    eval("toggleSpinning();")
+
     this.tip = this.tipService.getTip();
   }
 
