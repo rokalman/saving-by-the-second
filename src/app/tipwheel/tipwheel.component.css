@@ -11,7 +11,13 @@ div {
 }
 
 .tiptext {
+    background-color: rgb(255,255,255);
+    opacity: 0.95;
     font-size: 1em;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
 }
 
 #spinWheel {
